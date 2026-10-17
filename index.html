@@ -1,0 +1,3866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yehia Monir | Operations, Risk & Business Transformation Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-dark: #061428;
+      --navy-light: #1a3152;
+      --gold: #D4AF37;
+      --gold-light: #e6c65a;
+      --white: #ffffff;
+      --off-white: #f8f9fc;
+      --gray-100: #f1f3f7;
+      --gray-200: #e4e8ef;
+      --gray-400: #9ca3af;
+      --gray-600: #6b7280;
+      --gray-800: #374151;
+      --shadow-sm: 0 2px 8px rgba(11, 31, 58, 0.06);
+      --shadow-md: 0 8px 24px rgba(11, 31, 58, 0.08);
+      --shadow-lg: 0 20px 50px rgba(11, 31, 58, 0.12);
+      --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      max-width: 100%;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    section,
+    .container,
+    .timeline,
+    .timeline-item {
+      max-width: 100%;
+    }
+
+    /* CUSTOM SCROLLBAR */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold) transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--gold), #a8862a);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-light);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    img[src=""],
+    img:not([src]) {
+      display: none;
+    }
+
+    video {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Prevent grid/flex blowout + long-word overflow on small screens */
+    .hero-content,
+    .timeline-content,
+    .project-content,
+    .contact-info,
+    .contact-form,
+    .profile-content {
+      min-width: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    a,
+    span,
+    div {
+      overflow-wrap: break-word;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 31, 58, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      padding: 12px 5%;
+      background: rgba(11, 31, 58, 0.98);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+      color: var(--navy) !important;
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    .mobile-toggle {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 140px 5% 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 60%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-content .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--gold);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero-content .tag::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(1.3);
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 .gold {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero .headline {
+      font-size: 1.25rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 25px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p.summary {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 35px;
+      max-width: 580px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+      border: 1px solid var(--navy);
+    }
+
+    .btn-dark:hover {
+      background: var(--navy-light);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding-top: 35px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-stat .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-stat .label {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+
+    /* Hero Image */
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      aspect-ratio: 4/5;
+      max-width: 450px;
+      margin-left: auto;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%);
+    }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 50%, rgba(11, 31, 58, 0.4));
+      z-index: 1;
+    }
+
+    .hero-image-frame {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-image-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--white);
+      color: var(--navy);
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      z-index: 3;
+    }
+
+    .hero-image-badge .big {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-image-badge .small {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 5px;
+    }
+
+    /* SECTION STYLES */
+    section {
+      padding: 100px 5%;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      position: relative;
+      padding: 0 40px;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-label::before {
+      left: 0;
+    }
+
+    .section-label::after {
+      right: 0;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title .gold {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .section-subtitle {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* EXECUTIVE PROFILE */
+    .profile {
+      background: var(--off-white);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .profile-image {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      min-height: 300px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--gold);
+      transform: translate(15px, 15px);
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    .profile-content .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .profile-content .quote::before {
+      content: '"';
+      position: absolute;
+      left: -10px;
+      top: -20px;
+      font-size: 5rem;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+    }
+
+    .profile-content p {
+      color: var(--gray-600);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .profile-signature {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .signature-line {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: var(--navy);
+    }
+
+    .signature-info .name {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.95rem;
+    }
+
+    .signature-info .title {
+      color: var(--gold);
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* COMPETENCIES */
+    .competencies {
+      background: var(--white);
+    }
+
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 20px;
+    }
+
+    .comp-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 30px 25px;
+      border-radius: 8px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .comp-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--gold);
+      transition: width 0.4s;
+    }
+
+    .comp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+
+    .comp-card:hover::before {
+      width: 100%;
+    }
+
+    .comp-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      transition: all 0.3s;
+    }
+
+    .comp-card:hover .comp-icon {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .comp-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .comp-card p {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* EXPERIENCE TIMELINE */
+    .experience {
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+    }
+
+    .experience .section-title {
+      color: var(--white);
+    }
+
+    .experience .section-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      align-items: start;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-dot {
+      width: 20px;
+      height: 20px;
+      background: var(--navy);
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.15);
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      transition: border-color 0.3s, background 0.3s;
+      min-width: 0;
+    }
+
+    .timeline-content:hover {
+      border-color: rgba(212, 175, 55, 0.6);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      grid-column: 1;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      grid-column: 3;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-spacer {
+      grid-column: 3;
+    }
+
+    .timeline-item:nth-child(even) .timeline-spacer {
+      grid-column: 1;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-details li {
+      max-width: 100%;
+    }
+
+    .contact-details li>div {
+      min-width: 0;
+    }
+
+    .hero-content .tag {
+      max-width: 100%;
+    }
+
+    .timeline-popup {
+      max-width: calc(100vw - 40px);
+    }
+
+    .timeline-role h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+
+    .timeline-company {
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-meta {
+      text-align: right;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    .timeline-meta .date {
+      display: inline-block;
+      color: var(--navy);
+      background: var(--gold);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      padding: 3px 12px;
+      border-radius: 50px;
+      margin-bottom: 6px;
+      white-space: nowrap;
+    }
+
+    /* Stacked job blocks (used for multi-role cards like Fraud Investigator) */
+    .timeline-jobs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .timeline-job {
+      padding: 12px 0;
+    }
+
+    .timeline-job+.timeline-job {
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+
+    .timeline-job-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      color: var(--navy);
+      background: var(--gold);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      padding: 3px 12px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .timeline-location {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .timeline-section {
+      margin-bottom: 18px;
+    }
+
+    .timeline-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-section-title {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      padding: 4px 12px;
+      background: rgba(212, 175, 55, 0.12);
+      border-radius: 50px;
+    }
+
+    .timeline-section p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .timeline-section ul {
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-section li {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.88rem;
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    .timeline-section li::before {
+      content: '▸';
+      position: absolute;
+      left: 2px;
+      top: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .timeline-result {
+      background: rgba(212, 175, 55, 0.1);
+      border-left: 3px solid var(--gold);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+    }
+
+    .timeline-result p {
+      margin: 0;
+    }
+
+    .timeline-result strong {
+      color: var(--gold);
+    }
+
+    /* ===== TIMELINE POPUP ===== */
+    .timeline-popup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--off-white);
+      border: 1px solid var(--gold);
+      border-radius: 15px;
+      padding: 24px 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.2);
+      z-index: 50;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      max-width: calc(100vw - 40px);
+    }
+
+    .timeline-popup.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+      display: flex;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s;
+    }
+
+    /* Centered fallback: used when the viewport cannot fit a full
+       same-size popup on the opposite side (any screen size). */
+    .timeline-popup.popup-centered {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      right: auto;
+      width: 90vw;
+      height: auto;
+      max-width: 440px;
+      max-height: 80vh;
+      min-height: auto;
+      transform: translate(-50%, -50%) scale(0.95);
+      overflow-y: auto;
+    }
+
+    .timeline-popup.popup-centered.is-open {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .timeline-popup-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      letter-spacing: 0.3px;
+    }
+
+    .timeline-popup p {
+      font-size: 0.85rem;
+      color: var(--navy-dark);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .timeline-popup p:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-popup ul {
+      list-style: none;
+      margin: 8px 0 10px;
+    }
+
+    .timeline-popup li {
+      font-size: 0.83rem;
+      color: var(--navy-dark);
+      padding: 3px 0 3px 18px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .timeline-popup li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .timeline-popup .popup-highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .timeline-hint {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(212, 175, 55, 0.3);
+    }
+
+    .timeline-hint-text {
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(212, 175, 55, 0.55);
+      transition: color 0.3s;
+      white-space: nowrap;
+      margin-right: auto;
+    }
+
+    .timeline-content:hover .timeline-hint-text {
+      color: var(--gold);
+    }
+
+    .timeline-hint-or {
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      font-style: italic;
+    }
+
+    .timeline-readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 4px;
+      padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+
+    .timeline-readmore:hover {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .timeline-readmore.is-active {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    /* FEATURED PROJECTS */
+    .projects {
+      background: var(--off-white);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s;
+      border: 1px solid var(--gray-200);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+
+    .project-image {
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .project-image video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+      max-width: 100%;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.08);
+    }
+
+    .project-card:hover .project-image video {
+      transform: scale(1.08);
+    }
+
+    .project-video-link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+      transition: transform 0.5s;
+    }
+
+    .project-card:hover .project-video-link {
+      transform: scale(1.05);
+    }
+
+    .project-video-link .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      padding-left: 3px;
+    }
+
+    .project-video-link .video-label {
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .project-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(11, 31, 58, 0.6));
+    }
+
+    .project-tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .project-content {
+      padding: 28px;
+    }
+
+    .project-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .project-content p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .project-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 15px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .metric {
+      background: var(--off-white);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      color: var(--navy);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      user-select: none;
+    }
+
+    .metric:hover {
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .metric.gold {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .metric.gold:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* KPI DASHBOARD */
+    .kpi {
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .kpi .section-title {
+      color: var(--white);
+    }
+
+    .kpi .section-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+      gap: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .kpi-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 35px 25px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    .kpi-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .kpi-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .kpi-label {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.5;
+    }
+
+    /* LEADERSHIP PHILOSOPHY */
+    .philosophy {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .philosophy-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .philosophy-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 40px;
+      position: relative;
+      padding: 0 40px;
+    }
+
+    .philosophy-quote::before {
+      content: '"';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8rem;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      opacity: 0.3;
+    }
+
+    .philosophy-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .pillar {
+      padding: 25px 15px;
+      border-top: 2px solid var(--gold);
+      background: var(--off-white);
+      border-radius: 0 0 6px 6px;
+    }
+
+    .pillar h5 {
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .pillar p {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+    }
+
+    /* EDUCATION */
+    .education {
+      background: var(--off-white);
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 25px;
+    }
+
+    .edu-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--gold);
+      transition: all 0.3s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .edu-year {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .edu-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .edu-institution {
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .edu-location {
+      color: var(--gray-600);
+      font-size: 0.82rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .testimonials .section-title {
+      color: var(--white);
+    }
+
+    .testimonials .section-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 30px;
+    }
+
+    .test-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 35px;
+      border-radius: 8px;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .test-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .test-card::before {
+      content: '"';
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 5rem;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      opacity: 0.3;
+    }
+
+    .test-stars {
+      color: var(--gold);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .test-text {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .test-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .test-info .name {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .test-info .role {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .contact-info>p {
+      color: var(--gray-600);
+      margin-bottom: 35px;
+    }
+
+    .contact-details {
+      list-style: none;
+    }
+
+    .contact-details li {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .contact-details li:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon-box {
+      width: 45px;
+      height: 45px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-details .label {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    .contact-details .value {
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .contact-details a:hover {
+      color: var(--gold);
+    }
+
+    .contact-form {
+      background: var(--off-white);
+      padding: 40px;
+      border-radius: 8px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .contact-form h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .contact-form>p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--gray-200);
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--navy);
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 35px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .form-submit:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 50px 5% 30px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: var(--gold);
+    }
+
+    .footer-tagline {
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.85rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 25px 0;
+    }
+
+    .footer-bottom {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .profile-grid,
+      .contact-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 968px) {
+
+      .hero-grid,
+      .profile-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-image {
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .hero-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+
+      .hero-image-frame {
+        display: none;
+      }
+
+      .hero-image-badge {
+        left: 0;
+        bottom: -15px;
+        padding: 15px 20px;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      /* The vertical line is drawn by each marker column itself (same box as
+         the dot), so line and dots share one positioning context and can
+         never drift apart at any screen width. */
+      .timeline::before {
+        display: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .timeline-marker {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: stretch;
+        position: relative;
+        align-items: flex-start;
+      }
+
+      .timeline-marker::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -60px;
+        left: 50%;
+        width: 2px;
+        transform: translateX(-50%);
+        background: var(--gold);
+        z-index: 0;
+      }
+
+      .timeline-item:first-child .timeline-marker::before {
+        top: 10px;
+        background: linear-gradient(to bottom, transparent, var(--gold) 45%);
+      }
+
+      .timeline-item:last-child .timeline-marker::before {
+        top: 0;
+        bottom: auto;
+        height: 10px;
+        background: linear-gradient(to bottom, var(--gold) 55%, transparent);
+      }
+
+      .timeline-dot {
+        position: relative;
+        z-index: 1;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+      }
+
+      .timeline-content {
+        padding: 24px 22px;
+      }
+
+      .timeline-spacer {
+        display: none;
+      }
+
+      /* Hide hover hint on touch/tablet — button is enough */
+      .timeline-hint-text,
+      .timeline-hint-or {
+        display: none;
+      }
+
+      .timeline-hint {
+        justify-content: flex-start;
+      }
+
+      .timeline-popup,
+      .timeline-item:nth-child(odd) .timeline-popup,
+      .timeline-item:nth-child(even) .timeline-popup {
+        position: fixed !important;
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+        width: 90vw !important;
+        height: auto !important;
+        max-width: 440px !important;
+        max-height: 80vh !important;
+        min-height: auto !important;
+        transform: translate(-50%, -50%) scale(0.95);
+        overflow-y: auto;
+      }
+
+      .timeline-popup.is-open {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .timeline-popup::before {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 20px 20px;
+        gap: 4px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      }
+
+      .nav-links a {
+        padding: 12px 4px;
+        width: 100%;
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .profile-image::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 5%;
+      }
+
+      .section-header {
+        margin-bottom: 50px;
+      }
+
+      .section-label {
+        padding: 0 30px;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+      }
+
+      .section-label::before,
+      .section-label::after {
+        width: 20px;
+      }
+
+      .hero {
+        padding: 120px 5% 60px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero .headline {
+        font-size: 1.05rem;
+      }
+
+      .hero-content .tag {
+        font-size: 0.72rem;
+        white-space: normal;
+        line-height: 1.5;
+      }
+
+      .hero-stats {
+        gap: 20px 16px;
+      }
+
+      .hero-stat .number {
+        font-size: 2rem;
+      }
+
+      .philosophy-quote {
+        font-size: 1.4rem;
+        padding: 0 10px;
+      }
+
+      .profile-content .quote {
+        font-size: 1.35rem;
+        padding-left: 20px;
+      }
+
+      .contact-info h3 {
+        font-size: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .timeline-item:not(:last-child) .timeline-marker::before {
+        bottom: -30px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+
+      .timeline-content {
+        padding: 20px 18px;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .timeline-meta {
+        text-align: left;
+      }
+
+      .timeline-popup {
+        padding: 20px;
+      }
+
+      .timeline-hint {
+        flex-wrap: wrap;
+      }
+
+      .projects-grid,
+      .test-grid,
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .kpi-card {
+        padding: 25px 15px;
+      }
+
+      .kpi-number {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .hero-image-badge {
+        padding: 12px 16px;
+      }
+
+      .hero-image-badge .big {
+        font-size: 1.5rem;
+      }
+
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 20px 16px;
+      }
+
+      .test-card,
+      .edu-card {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="logo">YEHIA<span>.</span>MONIR</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#profile">Profile</a>
+      <a href="#competencies">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="tag">Available for Executive Opportunities</div>
+        <h1>Yehia <span class="gold">Monir</span></h1>
+        <div class="headline">Operations, Risk, Project & Business Transformation Leader</div>
+        <p class="summary">Senior executive with 15+ years of international experience driving operational excellence,
+          mitigating financial risk, and leading business transformation across Europe, the Middle East, and global
+          markets. Dual MBA holder with proven expertise in fraud investigation, strategic operations, and
+          cross-functional leadership.</p>
+
+        <div class="hero-buttons">
+          <a href="./YEHYA%20MONIR%20PORTFOLIO.pdf" download="Yehya-Monir-CV.pdf" class="btn btn-primary">Download
+            CV</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <a href="#experience" class="btn btn-outline">View Experience</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number">15+</div>
+            <div class="label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">4</div>
+            <div class="label">Countries</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">2</div>
+            <div class="label">MBA Degrees</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">4</div>
+            <div class="label">Languages</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="Yehia.png" alt="Yehia Monir - Executive Portrait">
+        </div>
+        <div class="hero-image-frame"></div>
+        <div class="hero-image-badge">
+          <div class="big">15+</div>
+          <div class="small">Years of Impact</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="profile" id="profile">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Executive Profile</div>
+        <h2 class="section-title">A Leader Built for <span class="gold">Complex Challenges</span></h2>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-image">
+          <img src="Yehia-2.png" alt="Executive Leadership">
+        </div>
+        <div class="profile-content">
+          <div class="quote">
+            Operational excellence is not about managing processes — it's about empowering people, mitigating risk, and
+            delivering measurable business impact.
+          </div>
+          <p>Senior professional with over 15 years of progressive experience across multiple disciplines,
+            including fraud investigation, e-crime prevention, media production project management,
+            broadcast operations management, and strategic leadership. Proven expertise in
+            transforming complex challenges into structured, compliant, and high-performing
+            operational frameworks.</p>
+          <p>Demonstrated success in leading cross-functional teams, managing substantial budgets,
+            coordinating with national and international stakeholders, and implementing process
+            improvements that enhance operational efficiency and mitigate risk. Combines strong
+            analytical capabilities with strategic insight to deliver measurable and sustainable results.</p>
+          <p>Holding dual MBA degrees and possessing extensive international experience across Egypt,
+            Lithuania, Europe, and Jordan, brings a global perspective to problem-solving and decision-
+            making. Thrives in dynamic environments, leveraging a diverse professional background to
+            create value, drive innovation, and contribute to organizational success.</p>
+
+          <div class="profile-signature">
+            <div class="signature-line">Yehia Monir</div>
+            <div class="signature-info">
+              <div class="title">Operations & Risk Leader</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="competencies" id="competencies">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Core Competencies</div>
+        <h2 class="section-title">Areas of <span class="gold">Executive Expertise</span></h2>
+        <p class="section-subtitle">A comprehensive skill set honed across 15+ years of international leadership in
+          operations, risk, and transformation.</p>
+      </div>
+
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-icon">01</div>
+          <h4>Operations Management</h4>
+          <p>End-to-end operational leadership and process optimization</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">02</div>
+          <h4>Strategic Leadership</h4>
+          <p>Executive decision-making and organizational strategy</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">03</div>
+          <h4>Project Management</h4>
+          <p>Complex multi-stakeholder project delivery</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">04</div>
+          <h4>Fraud Investigation</h4>
+          <p>E-crime prevention and financial fraud detection</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">05</div>
+          <h4>Risk Management</h4>
+          <p>Enterprise risk assessment and mitigation strategies</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">06</div>
+          <h4>Compliance & Governance</h4>
+          <p>Regulatory adherence and audit-ready frameworks</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">07</div>
+          <h4>Stakeholder Management</h4>
+          <p>Executive and cross-border stakeholder engagement</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">08</div>
+          <h4>Team Leadership</h4>
+          <p>Building and scaling high-performance teams</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">09</div>
+          <h4>Process Improvement</h4>
+          <p>Workflow optimization and operational efficiency</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">10</div>
+          <h4>Change Management</h4>
+          <p>Leading transformation and organizational change</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">11</div>
+          <h4>Media Operations</h4>
+          <p>Broadcast and production management expertise</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">12</div>
+          <h4>Business Transformation</h4>
+          <p>Strategic restructuring and growth initiatives</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">13</div>
+          <h4>Performance Management</h4>
+          <p>KPI frameworks and data-driven performance</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">14</div>
+          <h4>Customer Experience</h4>
+          <p>Service excellence and satisfaction optimization</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">15</div>
+          <h4>Resource Planning</h4>
+          <p>Budget management and strategic allocation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Professional Journey</div>
+        <h2 class="section-title">Executive <span class="gold">Experience</span></h2>
+        <p class="section-subtitle">A track record of leadership, impact, and measurable business outcomes across
+          industries and borders. Select any role for a detailed breakdown.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-role">
+              <h4>Fraud Investigator</h4>
+            </div>
+            <div class="timeline-jobs">
+              <div class="timeline-job">
+                <div class="timeline-job-top">
+                  <span class="timeline-company">Teleperformance</span>
+                  <span class="timeline-date">2023 ─ 2026</span>
+                </div>
+                <div class="timeline-location">Cairo, Egypt, Africa</div>
+              </div>
+              <div class="timeline-job">
+                <div class="timeline-job-top">
+                  <span class="timeline-company">Western Union</span>
+                  <span class="timeline-date">2015 ─ 2017</span>
+                </div>
+                <div class="timeline-location">Vilnius, Lithuania, Europe</div>
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Responsible for detecting, investigating, and preventing fraudulent activities across multiple
+                channels, including financial transactions, insurance claims, and digital platforms.</p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Conducted comprehensive fraud investigations, analysing customer allegations, suspicious
+                  activities, transaction patterns, and fraud indicators to identify potential risks and fraudulent
+                  behaviour.</li>
+                <li>Monitored transactions and activities across multiple systems, utilising analytical tools and
+                  fraud detection platforms to identify anomalies, emerging fraud trends, and high-risk cases.</li>
+                <li>Assessed fraud risks, organisational vulnerabilities, and evolving threat landscapes, providing
+                  strategic recommendations to senior management to strengthen controls and mitigate losses.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Ensured all investigative activities were conducted in accordance with applicable
+                  regulatory requirements, industry standards, and internal policies, including AML,
+                  KYC, data protection, and compliance frameworks.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-spacer"></div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Fraud Investigator</div>
+            <p><span class="popup-highlight">Fraud Investigator, Middle East & Gulf Area</span></p>
+            <p>Responsible for detecting, investigating, and preventing fraudulent activities across multiple
+              channels, including financial transactions, insurance claims, and digital platforms. I
+              combine analytical rigor, investigative expertise, and regulatory knowledge to protect
+              customers'/users' assets, reduce financial losses, and ensure compliance with legal and
+              industry standards. My role requires meticulous attention to detail, strong communication
+              skills, and the ability to collaborate with internal teams and external agencies to resolve
+              complex cases.</p>
+            <ul>
+              <li>Conducted comprehensive fraud investigations, analysing customer allegations, suspicious
+                activities, transaction patterns, and fraud indicators to identify potential risks and fraudulent
+                behaviour.</li>
+              <li>Monitored transactions and activities across multiple systems, utilising analytical tools and
+                fraud detection platforms to identify anomalies, emerging fraud trends, and high-risk cases.</li>
+              <li>
+                Assessed fraud risks, organisational vulnerabilities, and evolving threat landscapes, providing
+                strategic recommendations to senior management to strengthen controls and mitigate losses.
+              </li>
+              <li>
+                Performed end-to-end case management, including evidence gathering, stakeholder
+                interviews, documentation, root cause analysis, and preparation of detailed investigation
+                reports with actionable recommendations.
+              </li>
+              <li>
+                Collaborated with internal stakeholders, including Risk, Compliance, Legal, Customer Service,
+                and IT teams, as well as external partners, financial institutions, and law enforcement agencies
+                to support investigations, fund recovery efforts, and legal proceedings.
+              </li>
+              <li>
+                Reviewed and evaluated fraud alerts generated by automated monitoring systems,
+                determining appropriate escalation paths and investigative actions.
+              </li>
+              <li>
+                Guided customers on fraud prevention best practices, safeguarding financial assets, and
+                resolving fraud-related incidents and technical concerns.
+              </li>
+              <li>Supported the development and implementation of fraud prevention strategies, awareness
+                programs, and process enhancements aimed at reducing fraud exposure and strengthening
+                organizational resilience.</li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>
+                Ensured all investigative activities were conducted in accordance with applicable
+                regulatory requirements, industry standards, and internal policies, including AML,
+                KYC, data protection, and compliance frameworks.
+              </li>
+              <li>
+                Maintained accurate, confidential, and audit-ready case records, supporting
+                regulatory reviews, audits, and legal proceedings.
+              </li>
+              <li>
+                Prepared and presented management reports on fraud trends, investigation
+                outcomes, risk assessments, and loss prevention performance metrics.
+              </li>
+              <li>
+                Monitored regulatory developments and emerging fraud typologies to ensure
+                continuous alignment with industry best practices and compliance requirements.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spacer"></div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                <h4>Pre-Travel Team Leader</h4>
+                <div class="timeline-company">TUI UK | Teleperformance</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="date">2021 ─ 2022</span>
+                Cairo, Egypt, Africa
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Led a team of pre-travel advisors responsible for delivering exceptional customer
+                experiences throughout the pre-departure journey.</p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Led, coached, and developed a team of 22 advisors, driving a high-performance
+                  culture focused on operational excellence, customer satisfaction, and continuous
+                  improvement.</li>
+                <li>Managed day-to-day pre-travel operations, including workforce planning, resource
+                  allocation, scheduling, and workload management to ensure consistent
+                  achievement of service-level targets.</li>
+                <li>Monitored operational performance and key performance indicators (KPIs),
+                  delivering performance reviews, coaching, training, and development initiatives to
+                  enhance team capability and productivity.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Successfully led a team of 22 advisors, consistently exceeding operational
+                  performance and customer satisfaction targets.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Pre-Travel Team Leader</div>
+            <p>Led a team of pre-travel advisors responsible for delivering exceptional customer
+              experiences throughout the pre-departure journey. Combined people leadership,
+              operational management, and customer service excellence to ensure efficient handling of
+              travel enquiries, booking amendments, and customer support requirements while
+              maintaining alignment with TUI's service standards and business objectives.
+              <br>
+              <br>
+              Acted as the primary escalation point for complex customer cases, driving issue resolution,
+              enhancing operational efficiency, and collaborating with cross-functional teams to optimize
+              pre-travel processes and improve customer satisfaction.
+            </p>
+            <ul>
+              <li>Led, coached, and developed a team of 22 advisors, driving a high-performance
+                culture focused on operational excellence, customer satisfaction, and continuous
+                improvement.</li>
+              <li>Managed day-to-day pre-travel operations, including workforce planning, resource
+                allocation, scheduling, and workload management to ensure consistent
+                achievement of service-level targets.</li>
+              <li>Monitored operational performance and key performance indicators (KPIs),
+                delivering performance reviews, coaching, training, and development initiatives to
+                enhance team capability and productivity.</li>
+              <li>Served as the primary escalation point for complex customer cases, resolving
+                operational challenges related to flight changes, booking amendments, travel
+                documentation, and special assistance requirements.</li>
+              <li>Proactively identified service risks and potential travel disruptions, coordinating with
+                internal stakeholders to maintain service continuity and minimize customer impact.</li>
+              <li>
+                Collaborated closely with Flight Operations, Airport Operations, Sales, Customer
+                Service, and senior management teams to ensure seamless service delivery and
+                alignment with business objectives.
+              </li>
+              <li>
+                Analysed operational data, customer feedback, and service trends to identify
+                improvement opportunities, implement process enhancements, and drive
+                operational efficiencies.
+              </li>
+              <li>
+                Ensured compliance with company policies, aviation regulations, data protection
+                requirements, and operational governance standards while producing performance
+                reports and management insights to support strategic decision-making.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>
+                Successfully led a team of 22 advisors, consistently exceeding operational
+                performance and customer satisfaction targets.
+              </li>
+              <li>
+                Reduced average query resolution times by 30% through workflow optimization,
+                process improvements, and targeted coaching initiatives.
+              </li>
+              <li>
+                Maintained service-level performance above target during peak seasonal demand,
+                ensuring operational stability and exceptional customer experience.
+              </li>
+              <li>
+                Developed and implemented an enhanced onboarding program that reduced new-
+                hire ramp-up time by 20% and accelerated operational readiness.
+              </li>
+              <li>
+                Recognized by senior leadership for driving operational excellence, team
+                performance, customer satisfaction, and continuous improvement initiatives.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                <h4>Account Manager, Post-Production</h4>
+                <div class="timeline-company">Media Gate</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="date">2017 ─ 2019</span>
+                Cairo, Egypt, Africa
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Acted as the primary liaison between clients and the post-production department,
+                overseeing the successful delivery of television, radio, and outdoor advertising campaigns
+                from concept through final broadcast and distribution. </p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Managed end-to-end post-production workflows across television, radio, and
+                  outdoor advertising campaigns.</li>
+                <li>served as the primary point of contact for client accounts, ensuring clear
+                  communication, stakeholder alignment, and exceptional service delivery.</li>
+                <li>Planned and coordinated production schedules, resource allocation, and project
+                  milestones across multiple simultaneous projects.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Successfully managed a high volume of post-production projects annually,
+                  consistently delivering high-quality content on schedule and within budget.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-spacer"></div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Account Manager, Post-Production</div>
+            <p>Acted as the primary liaison between clients and the post-production department,
+              overseeing the successful delivery of television, radio, and outdoor advertising campaigns
+              from concept through final broadcast and distribution. Managed client relationships,
+              production workflows, budgets, and cross-functional teams to ensure projects were
+              delivered on time, within budget, and in line with creative and technical requirements.
+              <br>
+              <br>
+              Responsible for coordinating multiple concurrent projects, translating client objectives into
+              actionable production plans, and ensuring seamless collaboration between creative teams,
+              editors, sound engineers, motion graphic designers, voice-over talent, media agencies, and
+              external partners. Maintained full ownership of project timelines, resource allocation,
+              quality assurance, and final delivery standards.
+              <br>
+              <br>
+              A key aspect of the role involved building long-term client relationships, managing
+              stakeholder expectations, and providing strategic guidance throughout the production
+              lifecycle. Through proactive communication and a solution-oriented approach, consistently
+              maintained high levels of client satisfaction while identifying opportunities to expand service
+              offerings and support business growth.
+            </p>
+            <ul>
+              <li>Managed end-to-end post-production workflows across television, radio, and
+                outdoor advertising campaigns.</li>
+              <li>served as the primary point of contact for client accounts, ensuring clear
+                communication, stakeholder alignment, and exceptional service delivery.</li>
+              <li>Planned and coordinated production schedules, resource allocation, and project
+                milestones across multiple simultaneous projects.</li>
+              <li>
+                Led project reviews and client consultations to gather feedback, manage
+                expectations, and ensure alignment with campaign objectives.
+              </li>
+              <li>
+                Oversaw quality control processes, ensuring all content met creative briefs, technical
+                specifications, broadcast requirements, and industry standards.
+              </li>
+              <li>
+                Coordinated content versioning and adaptation for multiple platforms, formats, and
+                regional requirements.
+              </li>
+              <li>
+                Managed project budgets, quotations, cost control, and profitability while ensuring
+                efficient resource utilization.
+              </li>
+              <li>
+                Negotiated with external vendors and freelance talent to secure high-quality services
+                within budget parameters.
+              </li>
+              <li>
+                Collaborated closely with creative, production, media planning, and business
+                development teams to ensure successful project execution and account growth.
+              </li>
+              <li>
+                Proactively identified operational improvements to enhance workflow efficiency,
+                turnaround times, and delivery performance.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Selected Projects:</span></p>
+            <ul>
+              <li>
+                Gastec / Universal / Union Air / Next Point / Carrefour, and more ─ Managed the post-
+                production delivery of integrated advertising campaigns across television, radio, and
+                outdoor media platforms, ensuring compliance with client specifications, broadcast
+                requirements, and delivery deadlines.
+              </li>
+              <li>
+                Successfully supported a portfolio of commercial and corporate advertising
+                campaigns for leading brands and agencies across the Egyptian market.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>
+                Successfully managed a high volume of post-production projects annually,
+                consistently delivering high-quality content on schedule and within budget.
+              </li>
+              <li>
+                Maintained strong client retention through proactive account management,
+                operational excellence, and trusted client partnerships.
+              </li>
+              <li>
+                Contributed to account growth by identifying opportunities for additional services
+                and value-added production solutions.
+              </li>
+              <li>
+                Improved project delivery timelines through enhanced workflow coordination,
+                resource planning, and stakeholder management.
+              </li>
+              <li>
+                Established a reputation for delivering technically accurate, broadcast-ready content
+                while maintaining exceptional client service standards.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spacer"></div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                <h4>Marketing Manager</h4>
+                <div class="timeline-company">DeTi ART UAB</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="date">2014</span>
+                Vilnius, Lithuania, Europe
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Led the development and execution of global marketing initiatives aimed at strengthening
+                brand positioning, expanding international market presence, and supporting organizational
+                growth.</p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Developed and implemented comprehensive marketing and communication
+                  strategies to strengthen brand awareness, support business growth, and reinforce
+                  the organization’s mission.</li>
+                <li>Defined and managed global brand positioning, ensuring consistency in messaging,
+                  visual identity, and customer experience across international markets.</li>
+                <li>Conducted market research, competitive analysis, and consumer insight studies to
+                  identify emerging trends and translate findings into actionable marketing initiatives.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Successfully expanded market presence across Greece, Russia, Estonia, and
+                  Poland, increasing brand awareness by <strong>20%</strong> within 18 months through targeted
+                  market expansion strategies, integrated marketing campaigns, and effective
+                  international stakeholder management.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Marketing Manager</div>
+            <p>Led the development and execution of global marketing initiatives aimed at strengthening
+              brand positioning, expanding international market presence, and supporting organizational
+              growth. Worked closely with executive leadership, sales, product development, and external
+              partners to align marketing strategies with business objectives, ensuring a consistent brand
+              identity across multiple markets while allowing for local cultural adaptation.</p>
+            <ul>
+              <li>Developed and implemented comprehensive marketing and communication
+                strategies to strengthen brand awareness, support business growth, and reinforce
+                the organization’s mission.</li>
+              <li>Defined and managed global brand positioning, ensuring consistency in messaging,
+                visual identity, and customer experience across international markets.</li>
+              <li>Conducted market research, competitive analysis, and consumer insight studies to
+                identify emerging trends and translate findings into actionable marketing initiatives.</li>
+              <li>Planned and executed integrated multi-channel marketing campaigns, managing the
+                full lifecycle from strategy and creative development through launch, performance
+                measurement, and optimization.</li>
+              <li>
+                Directed digital marketing activities, including social media, content marketing,
+                SEO/SEM, and strategic partnerships to increase engagement, brand visibility, and
+                customer acquisition.
+              </li>
+              <li>
+                Coordinated cross-functional collaboration between Product Development, Sales,
+                Supply Chain, and executive leadership teams to ensure alignment between
+                marketing activities and broader business objectives.
+              </li>
+              <li>
+                Managed stakeholder relationships and communication strategies across internal
+                teams, external partners, distributors, and international markets.
+              </li>
+              <li>
+                Led and mentored marketing teams, fostering a culture of collaboration, innovation,
+                accountability, and continuous professional development.
+              </li>
+              <li>
+                Oversaw marketing budgets, resource allocation, and performance metrics to
+                maximize return on investment and ensure efficient use of resources.
+              </li>
+              <li>
+                Established KPI frameworks and reporting mechanisms, leveraging analytics and
+                market insights to evaluate campaign effectiveness and drive continuous
+                improvement.
+              </li>
+              <li>
+                Directed public relations, corporate communications, and brand reputation
+                initiatives while promoting the organization’s commitment to safety, sustainability,
+                ethical practices, and community engagement.
+              </li>
+              <li>
+                Provided strategic guidance to international distributors and market representatives
+                to ensure successful local execution while maintaining global brand standards.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>Successfully expanded market presence across Greece, Russia, Estonia, and
+                Poland, increasing brand awareness by <strong>20%</strong> within 18 months through targeted
+                market expansion strategies, integrated marketing campaigns, and effective
+                international stakeholder management.</li>
+              <li>
+                Decreased turnover by <strong>60%</strong>, employee satisfaction scores increased from
+                <strong>3.2</strong> to <strong>4.6</strong>
+                out of <strong>5</strong>, and two team members were promoted to senior roles within a year.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                <h4>Project Manager</h4>
+                <div class="timeline-company">Melody FM 91.1 & Zain FM 102.1</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="date">2013</span>
+                Amman, Jordan, Europe
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Responsible for leading complex, cross-functional projects across
+                two leading radio stations.</p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Coordinated complex project workflows and timelines across multiple stakeholders,
+                  including executive sponsors, department heads, and external partners.</li>
+                <li>Developed detailed project plans, defining scope, objectives, deliverables, and
+                  success metrics for each initiative.</li>
+                <li>Monitored project progress against milestones, proactively identifying risks and
+                  implementing mitigation strategies.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Successfully coordinated 2 projects simultaneously, delivering all on time and within
+                  scope.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-spacer"></div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Project Manager</div>
+            <p>Responsible for leading complex, cross-functional projects across
+              two leading radio stations. My role involved coordinating workflows, optimizing operational
+              processes, and managing teams to ensure successful project delivery. I served as the bridge
+              between executive leadership and operational teams, translating strategic objectives into
+              actionable plans while maintaining quality standards and meeting tight deadlines. I played
+              a key role in launching new operational units and driving efficiency improvements across the
+              organization.</p>
+            <ul>
+              <li>Coordinated complex project workflows and timelines across multiple stakeholders,
+                including executive sponsors, department heads, and external partners.</li>
+              <li>Developed detailed project plans, defining scope, objectives, deliverables, and
+                success metrics for each initiative.</li>
+              <li>Monitored project progress against milestones, proactively identifying risks and
+                implementing mitigation strategies.</li>
+              <li>Managed resource allocation across concurrent projects, ensuring teams had the
+                tools and support needed to deliver on time.</li>
+              <li>
+                Synthesized operational data to identify process inefficiencies and bottlenecks
+                across departments.
+              </li>
+              <li>
+                Conducted root cause analysis and recommended optimization solutions to senior
+                leadership.
+              </li>
+              <li>
+                Implemented streamlined workflows that reduced project turnaround times and
+                improved cross-departmental collaboration.
+              </li>
+              <li>
+                Developed and maintained project documentation, including status reports, risk
+                logs, and post-project evaluations.
+              </li>
+              <li>
+                Managed team coordination across multiple departments, ensuring clear
+                communication and alignment on project goals.
+              </li>
+              <li>
+                Monitored team performance against KPIs, providing feedback and support to
+                maintain quality standards.
+              </li>
+              <li>
+                Facilitated regular project meetings, keeping stakeholders informed and addressing
+                issues promptly.
+              </li>
+              <li>
+                Fostered a collaborative work environment that encouraged accountability and
+                creative problem-solving.
+              </li>
+              <li>
+                Oversaw the launch and establishment of new operational units, coordinating
+                executive sponsors and cross-functional teams.
+              </li>
+              <li>
+                Developed launch plans, including timelines, resource requirements, and
+                operational procedures.
+              </li>
+              <li>
+                Managed the onboarding of new team members and ensured smooth integration into
+                existing workflows.
+              </li>
+              <li>
+                Monitored post-launch performance and implemented adjustments to optimize
+                operations.
+              </li>
+              <li>
+                Served as the primary point of contact for project-related communications, ensuring
+                transparency across all levels.
+              </li>
+              <li>
+                Prepared and presented regular status reports to senior leadership, highlighting
+                progress, risks, and recommendations.
+              </li>
+              <li>
+                Managed expectations by balancing strategic ambitions with practical constraints.
+              </li>
+              <li>
+                Built strong relationships with internal and external stakeholders, fostering trust and
+                collaboration.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>Successfully coordinated 2 projects simultaneously, delivering all on time and within
+                scope.</li>
+              <li>Identified and implemented process improvements that reduced project turnaround
+                time by <strong>25%.</strong></li>
+              <li>Led the launch of 2 new operational units, establishing workflows and team
+                structures that became models for future initiatives.</li>
+              <li>
+                Improved cross-departmental collaboration, resulting in a <strong>30%</strong> reduction in project
+                delays.
+              </li>
+              <li>Received recognition from senior leadership for exceptional project coordination and
+                problem-solving.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spacer"></div>
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                <h4>Production & Live Broadcast Manager</h4>
+                <div class="timeline-company">Nogoum FM 100.6 NRP</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="date">2003 ─ 2010</span>
+                Cairo, Egypt, Africa
+              </div>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Challenge</div>
+              <p>Responsible for overseeing the strategic
+                development and operational establishment of a major media organization.</p>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Action</div>
+              <ul>
+                <li>Led the planning, coordination, and execution of multiple projects simultaneously,
+                  defining project scope, objectives, deliverables, timelines, and success metrics.</li>
+                <li>Developed and maintained detailed project plans, monitoring progress against
+                  milestones, identifying risks, and implementing mitigation strategies to ensure
+                  successful delivery.</li>
+                <li>Managed resource allocation across concurrent initiatives, ensuring teams had the
+                  necessary support, tools, and guidance to achieve project objectives efficiently.</li>
+              </ul>
+            </div>
+            <div class="timeline-section">
+              <div class="timeline-section-title">Result</div>
+              <div class="timeline-result">
+                <p>Successfully coordinated multiple concurrent projects, consistently delivering within
+                  scope, schedule, and operational requirements.</p>
+              </div>
+            </div>
+            <div class="timeline-hint">
+              <span class="timeline-hint-text">Hover for details</span>
+              <span class="timeline-hint-or">or</span>
+              <button type="button" class="timeline-readmore">Read More</button>
+            </div>
+          </div>
+
+          <div class="timeline-popup">
+            <div class="timeline-popup-title">Production & Live Broadcast Manager</div>
+            <p>Responsible for overseeing the strategic
+              development and operational establishment of a major media organization. My role
+              combined production management, live broadcast oversight, and organizational
+              development. I coordinated complex workflows across multiple departments, managed
+              cross-functional teams, and provided strategic support to senior leadership. I played a
+              pivotal role in building the operational infrastructure, implementing technical systems, and
+              ensuring high-quality broadcast outcomes that met organizational standards and audience
+              expectations.</p>
+            <ul>
+              <li>Led the planning, coordination, and execution of multiple projects simultaneously,
+                defining project scope, objectives, deliverables, timelines, and success metrics.</li>
+              <li>Developed and maintained detailed project plans, monitoring progress against
+                milestones, identifying risks, and implementing mitigation strategies to ensure
+                successful delivery.</li>
+              <li>Managed resource allocation across concurrent initiatives, ensuring teams had the
+                necessary support, tools, and guidance to achieve project objectives efficiently.</li>
+              <li>Analyzed operational data and business processes to identify inefficiencies, conduct
+                root-cause analysis, and recommend improvements that enhanced productivity and
+                cross-departmental collaboration.</li>
+              <li>
+                Implemented streamlined workflows and operational procedures that improved
+                project execution, reduced bottlenecks, and increased organizational efficiency.
+              </li>
+              <li>
+                Coordinated teams across multiple departments, fostering clear communication,
+                stakeholder alignment, accountability, and effective problem-solving throughout the
+                project lifecycle.
+              </li>
+              <li>
+                Facilitated regular project reviews and stakeholder meetings, providing updates on
+                progress, risks, performance metrics, and strategic recommendations.
+              </li>
+              <li>
+                Oversaw the launch and establishment of new operational units, including planning,
+                resource mobilization, process development, team onboarding, and post-launch
+                performance optimization.
+              </li>
+              <li>
+                Acted as the primary point of contact between executive leadership and operational
+                teams, ensuring transparency, effective communication, and alignment between
+                strategic priorities and operational execution.
+              </li>
+              <li>
+                Maintained comprehensive project documentation, including status reports, risk
+                registers, operational procedures, and post-project evaluations to support
+                continuous improvement and organizational learning.
+              </li>
+            </ul>
+            <p><span class="popup-highlight">Key Results:</span></p>
+            <ul>
+              <li>
+                Successfully coordinated multiple concurrent projects, consistently delivering within
+                scope, schedule, and operational requirements.
+              </li>
+              <li>
+                Identified and implemented process improvements that enhanced workflow
+                efficiency and reduced project turnaround times.
+              </li>
+              <li>
+                Led the successful establishment of new operational units, creating sustainable
+                processes and team structures that supported long-term operational effectiveness.
+              </li>
+              <li>
+                Strengthened cross-functional collaboration, improving communication, reducing
+                project delays, and enhancing overall delivery performance.
+              </li>
+              <li>
+                Recognized by senior leadership for exceptional project coordination, operational
+                problem-solving, and contributions to organizational efficiency.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Featured Projects</div>
+        <h2 class="section-title">Signature <span class="gold">Business Impact</span></h2>
+        <p class="section-subtitle">Selected initiatives demonstrating strategic leadership, operational excellence, and
+          measurable outcomes.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Fraud.jpg" alt="Fraud Risk Program">
+            <div class="project-tag">Fraud & Risk</div>
+          </div>
+          <div class="project-content">
+            <h3>Fraud Investigation & Risk Management</h3>
+            <h4>Western Union / Teleperformance</h4>
+            <p>Managed fraud detection, investigation, and prevention activities across
+              financial transactions and digital channels throughout Europe, the Middle East, and
+              Gulf markets, ensuring compliance with regulatory and organizational requirements.</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Managed fraud detection, investigation, and prevention activities across
+financial transactions and digital channels throughout Europe, the Middle East, and
+Gulf markets, ensuring compliance with regulatory and organizational requirements.">Scope</span>
+              <span class="metric" data-description="Conducted end-to-end investigations involving suspicious activities, fraud
+alerts, transaction monitoring, evidence gathering, stakeholder interviews, root-
+cause analysis, and case reporting. Collaborated with Risk, Compliance, Legal, IT,
+financial institutions, and law enforcement agencies to support fraud resolution,
+fund recovery, and risk mitigation. Developed fraud prevention initiatives, process
+improvements, and customer awareness programs to strengthen organizational
+resilience.">Action</span>
+              <span class="metric" data-description="Improved fraud detection capabilities, reduced exposure to financial loss,
+supported regulatory compliance, and enabled informed decision-making through
+comprehensive fraud trend analysis, risk assessments, and management reporting.">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="imagestui.jpg" alt="TUI Operations">
+            <div class="project-tag">Operations</div>
+          </div>
+          <div class="project-content">
+            <h3>Operations Leadership & Service Delivery</h3>
+            <h4>TUI UK | Teleperformance</h4>
+            <p>Led a team of 22 advisors responsible for pre-travel operations, customer
+              support, and service delivery, ensuring operational performance, regulatory
+              compliance, and exceptional customer experiences across the pre-departure
+              journey</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Led a team of 22 advisors responsible for pre-travel operations, customer
+support, and service delivery, ensuring operational performance, regulatory
+compliance, and exceptional customer experiences across the pre-departure
+journey">Scope</span>
+              <span class="metric" data-description="Managed workforce planning, resource allocation, performance
+management, training, coaching, and KPI monitoring. Acted as the primary
+escalation point for complex customer cases, coordinated with Flight Operations,
+Airport Operations, Sales, and Customer Service teams, and implemented process
+improvements to optimize operational efficiency and customer satisfaction.">Action</span>
+              <span class="metric" data-description="Consistently exceeded performance and customer satisfaction targets,
+reduced query resolution times by 30%, maintained service levels during peak
+demand periods, and implemented an onboarding program that reduced new-hire
+ramp-up time by 20%.">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <a class="project-video-link" href="https://youtu.be/Z89KS4eFo8I" target="_blank" class="play-link">
+            <img src="https://img.youtube.com/vi/Z89KS4eFo8I/maxresdefault.jpg" alt="Video Thumbnail" class="yt-thumb">
+             
+              <span class="play-btn">▶</span>
+              <span class="video-label">Watch on YouTube</span>
+            </a>
+            <div class="project-tag">Media</div>
+          </div>
+          <div class="project-content">
+            <h3>Post-Production Project Management</h3>
+            <h4>Media Gate</h4>
+            <p>Managed end-to-end post-production workflows, defining project scope,
+              budgeting, and timelines.</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Managed end-to-end post-production workflows, defining project scope,
+budgeting, and timelines.">Scope</span>
+              <span class="metric" data-description="Oversaw supplier contracts, assigned deliverables, and maintained strict
+quality standards. Prepared executive reports on project status and performance
+metrics.">Action</span>
+              <span class="metric" data-description="Ensured financial adherence, cost control, and on-time completion,
+strengthening professional relationships with agencies and partners.">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Global Marketing.png" alt="Market Expansion">
+            <div class="project-tag">Growth</div>
+          </div>
+          <div class="project-content">
+            <h3>Global Marketing Strategy & Market Expansion</h3>
+            <h4>DeTi ART UAB</h4>
+            <p>Led global marketing initiatives designed to strengthen brand positioning,
+              expand international market presence, and support organizational growth across
+              multiple European markets.</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Led global marketing initiatives designed to strengthen brand positioning,
+expand international market presence, and support organizational growth across
+multiple European markets.">Scope</span>
+              <span class="metric" data-description="Developed and executed integrated marketing strategies, managed multi-
+channel campaigns, directed digital marketing initiatives, conducted market
+research and competitive analysis, and collaborated with executive leadership,
+sales, product development, and international distributors to ensure alignment with
+business objectives. Managed budgets, performance metrics, brand
+communications, and stakeholder engagement across international markets.">Action</span>
+              <span class="metric" data-description="Successfully expanded market presence across Greece, Russia, Estonia, and
+Poland, increasing brand awareness by 20% within 18 months through targeted
+market expansion strategies and integrated marketing campaigns.">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="melody.png" alt="Market Expansion">
+            <div class="project-tag">Orchestration</div>
+          </div>
+          <div class="project-content">
+            <h3>Radio Project Launch & Operational Units</h3>
+            <h4>Melody FM 91.1 & Zain FM 102.1</h4>
+            <p>Oversaw the launch and establishment of new operational units for two major
+              radio stations.</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Oversaw the launch and establishment of new operational units for two major
+radio stations.">Scope</span>
+              <span class="metric" data-description="Coordinated complex project workflows across multiple stakeholders,
+synthesized operational data, and identified process inefficiencies.">Action</span>
+              <span class="metric" data-description="Recommended and implemented optimization solutions for senior
+leadership, ensuring quality standards and project deadlines were met during the
+critical launch phase.">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="nogoumFM.jpg" alt="Market Expansion">
+            <div class="project-tag">Launching</div>
+          </div>
+          <div class="project-content">
+            <h3>Broadcast Operations & Organizational Establishment</h3>
+            <h4>Nogoum FM 100.6 NRP</h4>
+            <p>Orchestrated the strategic development and operational establishment of a
+              major media organization from the ground up.</p>
+            <div class="project-metrics">
+              <span class="metric gold" data-description="Orchestrated the strategic development and operational establishment of a
+major media organization from the ground up.">Scope</span>
+              <span class="metric" data-description="Coordinated complex cross-functional workflows, managed executive
+priorities, and implemented technical systems and operational protocols to enhance
+efficiency.">Action</span>
+              <span class="metric" data-description="Successfully built organizational infrastructure and governance frameworks,
+supporting long-term compliance and strategic planning.">Result</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kpi">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Impact Dashboard</div>
+        <h2 class="section-title">Measurable <span class="gold">Business Outcomes</span></h2>
+        <p class="section-subtitle">Key performance indicators reflecting leadership impact across operations, risk, and
+          transformation initiatives.</p>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="15">0</div>
+          <div class="kpi-label">Years of<br>Experience</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="120" data-suffix="+">0</div>
+          <div class="kpi-label">Team Members<br>Led</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="30" data-suffix="%">0</div>
+          <div class="kpi-label">Reduction in<br>Resolution Time</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="20" data-suffix="%">0</div>
+          <div class="kpi-label">Brand Awareness<br>Growth</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="20" data-suffix="%">0</div>
+          <div class="kpi-label">Faster<br>Onboarding</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="4">0</div>
+          <div class="kpi-label">International<br>Markets</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Leadership Philosophy</div>
+        <h2 class="section-title">Principles That <span class="gold">Guide My Work</span></h2>
+      </div>
+
+      <div class="philosophy-content">
+        <div class="philosophy-quote">
+          True leadership is measured not by titles held, but by teams elevated, risks mitigated, and sustainable value
+          delivered to every stakeholder.
+        </div>
+
+        <div class="philosophy-pillars">
+          <div class="pillar">
+            <h5>Operational Excellence</h5>
+            <p>Structured processes, measurable outcomes</p>
+          </div>
+          <div class="pillar">
+            <h5>Integrity</h5>
+            <p>Ethical decision-making, transparency</p>
+          </div>
+          <div class="pillar">
+            <h5>Risk Awareness</h5>
+            <p>Proactive identification and mitigation</p>
+          </div>
+          <div class="pillar">
+            <h5>People Development</h5>
+            <p>Empowering teams to excel</p>
+          </div>
+          <div class="pillar">
+            <h5>Business Growth</h5>
+            <p>Sustainable value creation</p>
+          </div>
+          <div class="pillar">
+            <h5>Continuous Improvement</h5>
+            <p>Data-driven optimization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Education & Certifications</div>
+        <h2 class="section-title">Academic <span class="gold">Foundation</span></h2>
+        <p class="section-subtitle">Continuous learning across business leadership, strategy, and specialized
+          professional development.</p>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-year">2024 ─ 2026</div>
+          <h4>Master of Business Administration (MBA)</h4>
+          <div class="edu-institution">Heliopolis University</div>
+          <div class="edu-location">Cairo, Egypt</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2022 ─ 2024</div>
+          <h4>Master of Business Administration (MBA)</h4>
+          <div class="edu-institution">Cardiff School of Business</div>
+          <div class="edu-location">United Kingdom</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2022</div>
+          <h4>Strategic Sciences & National Security</h4>
+          <div class="edu-institution">Nasser Higher Military Academy</div>
+          <div class="edu-location">Cairo, Egypt</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2022</div>
+          <h4>Senior Leadership Program</h4>
+          <div class="edu-institution">Sadat Academy</div>
+          <div class="edu-location">Executive Certificate</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">1993 - 1995</div>
+          <h4>Airline Ticketing & Computer Operations</h4>
+          <div class="edu-institution">IAC for Tourism & Hotels</div>
+          <div class="edu-location">Diploma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Professional Recommendations</div>
+        <h2 class="section-title">What Leaders <span class="gold">Say</span></h2>
+        <p class="section-subtitle">Feedback from executives, managers, and colleagues who have witnessed my leadership
+          and impact firsthand.</p>
+      </div>
+
+      <div class="test-grid">
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">Yehia's ability to lead complex fraud investigations across multiple countries while
+            maintaining impeccable compliance standards is exceptional. His analytical rigor and strategic thinking have
+            materially strengthened our risk posture.</p>
+          <div class="test-author">
+            <div class="test-avatar">SM</div>
+            <div class="test-info">
+              <div class="name">Senior Executive</div>
+              <div class="role">Global Financial Services</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">Working with Yehia on our operational transformation was a turning point. He reduced
+            resolution times by 30% while simultaneously elevating team morale. A rare leader who delivers both results
+            and culture.</p>
+          <div class="test-author">
+            <div class="test-avatar">DR</div>
+            <div class="test-info">
+              <div class="name">Director of Operations</div>
+              <div class="role">International Travel Industry</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">Yehia's post-production account management was flawless. He consistently delivered
+            high-volume campaigns on time and within budget, while maintaining exceptional client relationships. A true
+            professional.</p>
+         <div class="avatar-circle">
+    <!-- Change the src to your logo image path -->
+    <img src="Mediagate.png" alt="Executive Leader" class="logo-image">
+            <div class="test-info">
+              <div class="name">Media Gate GM</div>
+              <div class="role">Media & Advertising</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">Yehia transformed our marketing team. Turnover dropped 60%, satisfaction scores soared,
+            and we expanded into four new European markets under his leadership. His people-first approach delivers
+            business results.</p>
+          <div class="avatar-circle">
+    <img src="detirart.png" alt="Senior Executive">
+            <div class="test-info">
+              <div class="name">Executive Leader</div>
+              <div class="role">European Markets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's Discuss <span class="gold">Opportunities</span></h2>
+        <p class="section-subtitle">Open to executive conversations about Operations, Risk, Strategy, and Business
+          Transformation leadership roles.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Ready to explore how I can contribute to your organization's success?</h3>
+          <p>Whether you're seeking an Operations Manager, Fraud Risk Leader, Strategy Director, or Business
+            Transformation executive, I'd welcome the opportunity to discuss how my experience aligns with your
+            strategic objectives.</p>
+
+          <ul class="contact-details">
+            <li>
+              <div class="contact-icon-box">✉</div>
+              <div>
+                <div class="label">Email</div>
+                <a href="mailto:ymonir@gmail.com" class="value">ymonir@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon-box">☎</div>
+              <div>
+                <div class="label">Phone</div>
+                <a href="tel:+201553161135" class="value">+20 155 316 1135</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon-box">in</div>
+              <div>
+                <div class="label">LinkedIn</div>
+                <a href="https://linkedin.com/in/yehia-monir-bbb8ab203" target="_blank"
+                  class="value">linkedin.com/in/yehia-monir</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon-box">◉</div>
+              <div>
+                <div class="label">Location</div>
+                <div class="value">Cairo, Egypt · Open to International Roles</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <h4>Send a Message</h4>
+          <p>I typically respond within 24 hours.</p>
+          <form
+            onsubmit="event.preventDefault(); alert('Thank you for your message. I will respond within 24 hours.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" required>
+            </div>
+            <div class="form-group">
+              <label>Organization</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Opportunity Type</label>
+              <select>
+                <option>Operations Leadership</option>
+                <option>Fraud Risk Management</option>
+                <option>Strategy & Transformation</option>
+                <option>Project Management</option>
+                <option>Consulting Engagement</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">YEHIA<span>.</span>MONIR</div>
+      <div class="footer-tagline">Operations · Risk · Strategy · Transformation</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#competencies">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        © 2026 Yehia Monir. All rights reserved. · Operations, Risk & Business Transformation Leader
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.comp-card, .project-card, .edu-card, .test-card, .kpi-card, .timeline-content, .pillar').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const suffix = el.dataset.suffix || '+';
+          let current = 0;
+          const increment = target / 40;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            el.textContent = Math.floor(current) + (current === target ? suffix : '');
+          }, 30);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.kpi-number').forEach(el => counterObserver.observe(el));
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      const card = item.querySelector('.timeline-content');
+      const popup = item.querySelector('.timeline-popup');
+      const toggleBtn = item.querySelector('.timeline-readmore');
+      if (!card || !popup) return;
+
+      const isOdd = Array.from(item.parentElement.children).indexOf(item) % 2 === 0;
+      const side = isOdd ? 'right' : 'left';
+      popup.classList.add(side === 'right' ? 'popup-right' : 'popup-left');
+
+      const GAP = 80; // px gap between card and popup
+
+      const positionPopup = () => {
+        if (window.innerWidth <= 968) {
+          popup.classList.add('popup-centered');
+          popup.style.width = '';
+          popup.style.height = '';
+          popup.style.left = '';
+          popup.style.right = '';
+          popup.style.top = '';
+          return;
+        }
+        const popupWidth = card.offsetWidth;
+        const popupHeight = card.offsetHeight;
+
+        const cardRect = card.getBoundingClientRect();
+
+        let fits = false;
+        if (side === 'right') {
+          fits = (cardRect.right + GAP + popupWidth) <= (window.innerWidth - 8);
+        } else {
+          fits = (cardRect.left - GAP - popupWidth) >= 8;
+        }
+
+        if (!fits || !popupWidth || !popupHeight) {
+          popup.classList.add('popup-centered');
+          popup.style.width = '';
+          popup.style.height = '';
+          popup.style.left = '';
+          popup.style.right = '';
+          popup.style.top = '';
+          return;
+        }
+
+        popup.classList.remove('popup-centered');
+        popup.style.width = popupWidth + 'px';
+        popup.style.height = popupHeight + 'px';
+
+        popup.style.top = card.offsetTop + 'px';
+
+        if (side === 'right') {
+          popup.style.left = (card.offsetLeft + popupWidth + GAP) + 'px';
+          popup.style.right = 'auto';
+        } else {
+          const itemWidth = item.offsetWidth;
+          popup.style.left = 'auto';
+          popup.style.right = (itemWidth - card.offsetLeft + GAP) + 'px';
+        }
+      };
+
+      let closeTimer = null;
+      let pinned = false; // becomes true when user clicks Read More
+
+      const openPopup = () => {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+        positionPopup();
+        popup.classList.add('is-open');
+        if (toggleBtn) toggleBtn.classList.add('is-active');
+      };
+
+      const closePopup = () => {
+        popup.classList.remove('is-open');
+        if (toggleBtn) toggleBtn.classList.remove('is-active');
+      };
+
+      const scheduleClose = () => {
+        if (pinned) return; // don't auto-close when pinned
+        clearTimeout(closeTimer);
+        closeTimer = setTimeout(() => {
+          closePopup();
+        }, 100);
+      };
+
+      card.addEventListener('mouseenter', openPopup);
+      popup.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+        if (toggleBtn) toggleBtn.classList.add('is-active');
+      });
+      card.addEventListener('mouseleave', scheduleClose);
+      popup.addEventListener('mouseleave', scheduleClose);
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          pinned = !pinned;
+          if (pinned) {
+            openPopup();
+          } else {
+            closePopup();
+          }
+        });
+      }
+
+
+      document.addEventListener('click', (e) => {
+        if (!pinned) return;
+        if (!item.contains(e.target)) {
+          pinned = false;
+          closePopup();
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (popup.classList.contains('is-open')) positionPopup();
+      });
+    });
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      const descriptionEl = card.querySelector('.project-content p');
+      const metrics = Array.from(card.querySelectorAll('.metric'));
+      if (!descriptionEl || metrics.length === 0) return;
+
+      const firstMetric = metrics[0];
+      const originalDescription = descriptionEl.textContent;
+
+      metrics.forEach(m => m.classList.remove('gold'));
+      firstMetric.classList.add('gold');
+
+      metrics.forEach(metric => {
+        metric.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const isActive = this.classList.contains('gold');
+
+          if (isActive) {
+            metrics.forEach(m => m.classList.remove('gold'));
+            firstMetric.classList.add('gold');
+            descriptionEl.textContent = originalDescription;
+          } else {
+            metrics.forEach(m => m.classList.remove('gold'));
+            this.classList.add('gold');
+            const desc = this.dataset.description || originalDescription;
+            descriptionEl.textContent = desc;
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
